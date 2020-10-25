@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users grades</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css' />
+</head>
+<body>
+<a href="users/asc">Sort by ascending</a>
+<a href="users/desc">Sort by descending</a>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Last name</th>
+        <th>Math</th>
+        <th>Physics</th>
+        <th>English</th>
+        <th>Average</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% marks.forEach(function (mark) { %>
+        <tr>
+            <td><%= mark.lastname %></td>
+            <td><%= mark.math %></td>
+            <td><%= mark.physics %></td>
+            <td><%= mark.english %></td>
+            <td><%= mark.average %></td>
+        </tr>
+    <%});%>
+    </tbody>
+</table>
+</body>
+</html>
